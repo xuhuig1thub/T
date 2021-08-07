@@ -1,4 +1,4 @@
-package com.example.fragmentbestpractice;
+package com.example.a;
 
 import org.junit.Test;
 
