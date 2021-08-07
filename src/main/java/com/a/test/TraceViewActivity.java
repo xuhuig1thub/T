@@ -75,7 +75,7 @@ public class TraceViewActivity extends AppCompatActivity {
         System.out.println("sum="+sum);
     }
 
-
+    /**###Jason 2021/8/7 21:58 */
     public void m4(View v){
             try {
                 URL url = new URL("https://www.baidu.com");
