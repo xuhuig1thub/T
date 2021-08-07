@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--用一个group来放item，checkableBehavior设置为single表示为一个组 -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/friends_md"
+            android:icon="@drawable/ic_menu_allfriends"
+            android:title="我的好友" />
+        <item
+            android:id="@+id/mail_md"
+            android:icon="@android:drawable/sym_action_email"
+            android:title="我的邮件" />
+        <item
+            android:id="@+id/location_md"
+            android:icon="@drawable/stat_sys_gps_on"
+            android:title="我的位置" />
+    </group>
+
+</menu>

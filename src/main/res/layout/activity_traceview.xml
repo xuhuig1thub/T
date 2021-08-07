@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp">
+    <Button
+        android:id="@+id/method_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="method1"
+        android:background="@drawable/btn_selector_test"
+        android:layout_margin="8dp"
+        android:onClick="m1"/>
+
+    <Button
+        android:id="@+id/method_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="method2"
+        android:background="@drawable/btn_red_hollow_rectangle"
+        android:textColor="#ce1818"
+        android:layout_margin="8dp"
+        android:onClick="m2"/>
+    <Button
+        android:id="@+id/method_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="method3"
+        android:shadowColor="#aa55"
+        android:shadowRadius="5"
+        android:shadowDx="10"
+        android:shadowDy="13"
+        android:layout_margin="8dp"
+        android:onClick="m3"/>
+    <Button
+        android:id="@+id/method_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="method4"
+        android:background="@drawable/btn_selector_test"
+        android:layout_margin="8dp"
+        android:onClick="m4"/>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+//apply plugin: 'com.android.model.application'
+apply plugin: 'com.android.application'
+
+//model {
+android {
+    compileSdkVersion 28
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        applicationId "com.a"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            // 设置支持的SO库架构，第三方给的so库哪几种架构，就配置这几种架构
+            abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64'
+        }
+        //    ndk {//指定生成的lib，比如此时生成native.so
+//        moduleName "NdkTest"
+//    }
+//    ndk {
+//            moduleName "libhuazict"         //生成的so名字
+//            abiFilters "armeabi", "armeabi-v7a", "x86"  //输出指定三种abi体系结构下的so库。
+//        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    sourceSets {
+        main {
+//            jniLibs.srcDirs=['jniLibs']
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+    ndkVersion '22.0.7026061'
+}
+
+//}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.so'])
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+//    implementation 'com.jakewharton:butterknife:8.5.1'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+    // circleimageview依赖库(图片圆形化开源项目)
+    implementation ('de.hdodenhof:circleimageview:2.1.0'){
+        exclude group:'com.android.support'
+    }
+// NavigationView依赖库
+    implementation 'com.android.support:design:28.0.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.google.code.gson:gson:2.7'
+
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+
+
+}

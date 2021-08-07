@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.a" >
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" /> <!-- 接收短信权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:name=".MApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/NoActionBar">
+        <activity android:name="com.a.MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".frag.NewsContentActivity"></activity>
+        <activity android:name="com.a.frag.dialog.FriendActivity"></activity>
+        <activity android:name=".notification.NotificationTestActivity"/>
+        <activity android:name=".notification.SecondActivity"></activity>
+
+        <activity android:name=".md.MdActivity"
+            android:theme="@style/NoActionBar"
+            android:label=""></activity>
+        <activity android:name=".md.NewsContentActivity"
+            android:theme="@style/NewsContentTheme"
+            android:label="">
+        </activity>
+        <activity android:name=".test.TraceViewActivity"
+            android:persistableMode="persistAcrossReboots"></activity>
+        <activity android:name=".view.ZoomImgActivity"/>
+        <activity android:name=".jetpack.TestActivity"/>
+
+
+        <service android:name=".notification.RemoteService"
+            android:process=":mys">
+            <intent-filter>
+                <action android:name="abcdefg"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

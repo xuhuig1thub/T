@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="CustomBtn">
+        <attr name="buttonNum" format="integer"/>
+        <attr name="item_background" format="reference|color"/>
+        <attr name = "btnFocusable" format = "boolean" />
+        <attr name = "btn_layout_width" format = "dimension" />
+        <attr name="btn_degree" format="float"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="TagsLayout">
+        <attr name="tagVerticalSpace" format="dimension" />
+        <attr name="tagHorizontalSpace" format="dimension" />
+    </declare-styleable>
+
+
+</resources>

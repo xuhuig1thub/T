@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/img_zoom"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="matrix"
+        android:src="@drawable/big_image" />
+    <ImageView
+        android:id="@+id/divider_line_zoom"
+        android:layout_below="@+id/img_zoom"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/holo_purple"
+        android:padding="5dp"/>
+    <com.a.view.MSurfaceView
+        android:id="@+id/msurfaceview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/divider_line_zoom"
+        />
+    <ImageView
+        android:id="@+id/img_test2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="matrix"
+        android:layout_toRightOf="@id/msurfaceview"
+        android:layout_below="@id/divider_line_zoom"
+        android:src="@android:color/holo_blue_bright" />
+</RelativeLayout>
